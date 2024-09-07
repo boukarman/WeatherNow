@@ -1,0 +1,131 @@
+/* Basic Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.weatherForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.cityInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Card Styling */
+.card {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.cityDisplay {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.tempDisplay {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.humidityDisplay, .descDisplay, .weatherEmoji {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.errorDisplay {
+    color: red;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .weatherForm, .card {
+        width: 95%;
+    }
+
+    .cityDisplay {
+        font-size: 1.5rem;
+    }
+
+    .tempDisplay {
+        font-size: 1.25rem;
+    }
+
+    .humidityDisplay, .descDisplay, .weatherEmoji {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cityInput {
+        font-size: 0.875rem;
+    }
+
+    button {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+
+    .cityDisplay {
+        font-size: 1.25rem;
+    }
+
+    .tempDisplay {
+        font-size: 1rem;
+    }
+
+    .humidityDisplay, .descDisplay, .weatherEmoji {
+        font-size: 0.75rem;
+    }
+}
